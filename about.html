@@ -79,10 +79,24 @@
                 <p class="hero__text">
             
                 </p>
-                <picture class="slider__right">
+            
+                <picture class="hero-section">
+                    <!-- Mobile -->
+                    <source srcset="./src/image/about/hero_2.webp" media="(max-width:450px)" type="image/webp">
+                    <source srcset="/Restore-vite/assets/hero_2-yBbE0uHw.jpg" media="(max-width:450px)">
                 
-                    <img src="/Restore-vite/assets/hero-6r58-d8C.jpg" alt="img">
+                    <!-- Tablet -->
+                    <source srcset="./src/image/about/hero_1.webp" media="(min-width:768px) and (max-width:1023px)" type="image/webp">
+                    <source srcset="/Restore-vite/assets/hero_1-CL6lprmG.jpg" media="max-width:800px">
+                
+                    <!-- Desktop / всі інші -->
+                    <source srcset="./src/image/about/hero.webp"  type="image/webp">
+                
+                    <!-- Fallback -->
+                    <img src="/Restore-vite/assets/hero-6r58-d8C.jpg" alt="Головний банер">
                 </picture>
+                
+                
                 <h2 class="hero__list-title">
                     Сьогодні в Компанії є 7 діючих сервісно-технічних центрів, що надають такі послуги:
                 </h2>

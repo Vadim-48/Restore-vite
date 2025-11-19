@@ -70,10 +70,23 @@
       <main>
       <section class="hero">
 <!--        <div class="container">-->
-            <picture class="hero__picture">
+            <picture class="">
+                <!-- Mobile -->
+                <source srcset=".webp" media="(max-width:450px)" type="image/webp">
+                <source srcset="" media="(max-width:450px)">
             
-                <img src="/Restore-vite/assets/sto-6ubp3J9k.jpg" alt="img">
+                <!-- Tablet -->
+                <source srcset=".webp" media="(min-width:768px) and (max-width:1023px)" type="image/webp">
+                <source srcset="" media="max-width:800px">
+            
+                <!-- Desktop / всі інші -->
+                <source srcset=".webp"  type="image/webp">
+            
+                <!-- Fallback -->
+                <img src="" alt="img">
             </picture>
+            
+            
             
             <!--<div class="hero__container">-->
             <!--    <div class="slider">-->
