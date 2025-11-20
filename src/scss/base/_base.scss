@@ -7,9 +7,13 @@ body{
     font-weight: 400;
     font-size: 16px;
     //color: #333;
-    background: #f9f9f9;
+    background: #f8f9fa;
     //background: #fff;
     position: relative;
+}
+
+body.lock{
+    overflow: hidden;
 }
 
 .container {
@@ -37,7 +41,7 @@ body{
     font-weight: 400;
     font-size: 16px;
     line-height: 1.50;
-    color: #777;
+    color: #333;
 }
 
 .lock-popup {
@@ -68,9 +72,9 @@ picture {
     }
 }
 
-@media (max-width: 450px){
+@media (max-width: 650px){
     .container {
-        padding: 0 15px;
+        padding: 0 13px;
     }
 }
 

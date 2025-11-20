@@ -1,5 +1,5 @@
 .hero {
-    margin-top: 229px;
+    padding-top: 73px;
     background: #fff;
 
     &__title-wrapper {
@@ -12,16 +12,13 @@
         text-align: center;
     }
     &__content {
+        margin-top: 30px;
         padding-inline: 38px 43px;
-    }
-
-    &__text-wrapper {
-        margin-top: 28px;
     }
 
     &__text {
         text-align: center;
-        line-height: 187%;
+        line-height: 1.87;
     }
     &__photo{
         margin-top: 25px;
@@ -33,21 +30,22 @@
     }
 
     &__list {
-        margin: 13px 0 0 12px;
+        margin: 13px 0 0 3px;
     }
     &__list-item{
         position: relative;
         margin-top: 4px;
+        text-indent: 8px;
         &::before {
             position: absolute;
             content: "";
-            width: 2px;
-            height: 2px;
+            width: 3px;
+            height: 3px;
             border-radius: 50%;
             background: #777;
-            top: 50%;
-            transform: translateY(-50%);
+            top: 10px;
             left: -8px;
+            left: 0;
 
         }
         &:first-child{
@@ -56,22 +54,69 @@
     }
 }
 
-
-
 @media (max-width: 850px) {
     .hero {
-        &__content {
-            padding-inline: 0;
-        }
+        padding-top: 29px;
         &__title-wrapper {
             padding: 26px 15px;
+        }
+        &__content {
+            padding-inline: 0;
+            margin-top: 37px;
+        }
+        &__text {
+            line-height: 1.37;
+        }
+        &__text-br{
+            display: none;
+        }
+        &__photo{
+            margin-top: 35px;
+        }
+        &__list-title {
+            margin-top: 34px;
+        }
+        &__list {
+            margin: 11px 0 0 2px;
         }
     }
 }
 
 @media (max-width: 650px){
-    hero__title-wrapper {
-        padding: 26px 15px;
+    .hero {
+        margin-inline: 13px;
+        &__container{
+            padding: 0 7px;
+        }
+        &__title-wrapper {
+            padding: 26px 15px;
+        }
+        &__content {
+            margin-top: 27px;
+        }
+        &__text{
+            padding-inline: 8px;
+        }
+        &__photo{
+            margin-top: 29px;
+        }
+        &__list-title {
+            margin-top: 23px;
+            padding-inline: 8px;
+            line-height: 1.5;
+        }
+        &__list {
+            margin: 20px 0 0 3px;
+            line-height: 1.75;
+            padding-inline: 8px;
+        }
+        &__list-item {
+            margin-top: 0;
+            &::before {
+                top: 12px;
+            }
+        }
+
     }
 }
 

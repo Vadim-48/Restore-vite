@@ -5,7 +5,7 @@ import { resolve } from 'path'
 import handlebars from 'vite-plugin-handlebars'
 import autoprefixer from 'autoprefixer'
 import viteImagemin from 'vite-plugin-imagemin'
-import { optimizeImages } from "./imageOptimizer";
+// import { optimizeImages } from "./imageOptimizer";
 
 // import { readFileSync } from 'fs'
 
@@ -71,7 +71,8 @@ export default defineConfig({
 
   server: {
     watch: {
-      include: ['src/html/**/*.html', 'src/**/*.html'],
+      // include: ['src/html/**/*.html', 'src/**/*.html'],
+      ignored: ['**/*.webp']
     },
   },
 

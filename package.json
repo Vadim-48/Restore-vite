@@ -4,9 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"node imageWatcher.js\" \"vite\"",
+    "dev": "concurrently \"node imageOptimizer.js\" \"vite\"",
     "prebuild": "rimraf dist",
-    "build": "vite",
+    "build": "vite build",
     "preview": "vite preview",
     "deploy": "gh-pages -d dist"
   },

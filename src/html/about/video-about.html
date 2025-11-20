@@ -1,24 +1,19 @@
-{{> partial/picture
-className="hero-section"
-alt="Головний банер"
-desktop="./src/image/about/hero.jpg"
-tablet="./src/image/about/hero_1.jpg"
-mobile="./src/image/about/hero_2.jpg"
-}}
+<!--<iframe class="video__file"-->
+<!--    src="https://www.youtube.com/embed/qaZe89hNLGw?si=uVMa_Xf9rR7eYF24"-->
+<!--    title="YouTube video player" frameborder="0"-->
+<!--    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"-->
+<!--    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>-->
+<!--</iframe>&ndash;&gt;-->
 
-<picture class="{{className}}">
-    <!-- Desktop -->
-    <source srcset="{{desktop}}.webp" media="(min-width:1024px)" type="image/webp">
-    <source srcset="{{desktop}}" media="(min-width:1024px)">
-
-    <!-- Tablet -->
-    <source srcset="{{tablet}}.webp" media="(min-width:768px) and (max-width:1023px)" type="image/webp">
-    <source srcset="{{tablet}}" media="(min-width:768px) and (max-width:1023px)">
-
-    <!-- Mobile -->
-    <source srcset="{{mobile}}.webp" media="(max-width:767px)" type="image/webp">
-    <source srcset="{{mobile}}" media="(max-width:767px)">
-
-    <!-- Fallback -->
-    <img src="{{desktop}}" alt="{{alt}}">
-</picture>
+<div class="video__wrapper">
+    <div class="video__overlay">
+        <img src="./src/image/about/play-icon.svg" alt="play" class="video__play-icon">
+    </div>
+    <iframe class="video__file"
+            src="https://www.youtube.com/embed/qaZe89hNLGw?enablejsapi=1"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+    </iframe>
+</div>

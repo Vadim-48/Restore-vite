@@ -12,16 +12,19 @@
 </head>
 <body class="body">
 <header class="header" id="header">
-    <div class="container">
-        {{> base/header}}
-    </div>
+    {{> base/header}}
     {{> base/burger}}
 </header>
 
 <main>
     <section class="hero">
-        <div class="container">
+        <div class="container hero__container">
             {{> about/hero-about}}
+        </div>
+    </section>
+    <section class="video">
+        <div class="container video__container">
+            {{> about/video-about}}
         </div>
     </section>
 </main>
