@@ -1,0 +1,44 @@
+.offers{
+    margin-top: 58px;
+    &__wrap{
+        display: grid;
+        grid-template-columns:1fr 1fr;
+        row-gap: 53px;
+    }
+    &__block{
+        display: flex;
+        gap: 24px;
+        width: 86%;
+    }
+    &__icon{
+        margin-top: 1px;
+        width: 26px;
+        height: 26px;
+        flex-shrink: 0;
+    }
+}
+
+@media (max-width: 1100px){
+
+}
+
+@media (max-width: 850px){
+    .offers {
+        margin-top: 51px;
+        &__wrap{
+            row-gap: 30px;
+        }
+        &__block{
+            gap: 12px;
+            width: 95%;
+        }
+    }
+}
+
+@media (max-width: 650px){
+
+}
+
+@media (max-width: 450px){
+
+}

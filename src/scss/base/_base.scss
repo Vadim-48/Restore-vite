@@ -5,7 +5,7 @@
 body{
     font-family: var(--font-family);
     font-weight: 400;
-    font-size: 16px;
+    //font-size: 16px;
     //color: #333;
     background: #f8f9fa;
     //background: #fff;
@@ -17,28 +17,27 @@ body.lock{
 }
 
 .container {
-    max-width: 1360px;
+    //max-width: 1360px;
+    max-width: 1420px;
     //width: 1360px;
     //padding: 0 64px;
     margin: 0 auto;
+    padding: 0 30px;
 }
 
 .title{
-    font-weight: 400;
     font-size: 20px;
     line-height: 1.50;
     color: #333;
 }
 
 .text_777{
-    font-weight: 400;
     font-size: 16px;
     line-height: 1.50;
     color: #777;
 }
 
 .text_333{
-    font-weight: 400;
     font-size: 16px;
     line-height: 1.50;
     color: #333;
@@ -58,11 +57,41 @@ picture {
     }
 }
 
-@media (max-width: 1360px){
-    .container {
-        padding: 0 30px;
+.btn{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 0;
+
+    border: 1px solid #cecece;
+    border-radius: 100px;
+}
+
+.list-dots li{
+    position: relative;
+    margin-top: 4px;
+    text-indent: 8px;
+    &::before {
+        position: absolute;
+        content: "";
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background: #777;
+        top: 0.6em;
+        left: 0;
+
+    }
+    &:first-child{
+        margin-top: 0;
     }
 }
+
 @media (max-width: 1360px){
     .container {
         padding: 0 30px;

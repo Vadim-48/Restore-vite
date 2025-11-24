@@ -1,10 +1,10 @@
 import { defineConfig } from 'vite'
 import path from 'path'
 import { resolve } from 'path'
-// import { viteStaticCopy } from 'vite-plugin-static-copy'
 import handlebars from 'vite-plugin-handlebars'
 import autoprefixer from 'autoprefixer'
 import viteImagemin from 'vite-plugin-imagemin'
+
 // import { optimizeImages } from "./imageOptimizer";
 
 // import { readFileSync } from 'fs'
@@ -34,20 +34,10 @@ export default defineConfig({
   },
 
   plugins: [
+
       handlebars({
       partialDirectory: path.resolve(__dirname, 'src/html'),
     }),
-
-      // viteStaticCopy({
-      //     targets: [
-      //         {
-      //             // src: path.resolve(__dirname, 'src/image'),
-      //           src: 'src/image/**/*.{png,jpg,jpeg,gif,svg,webp,avif}',
-      //           dest: 'image'      // dist/image - path fo images
-      //         }
-      //     ]
-      // }),
-    // ViteImageOptimizer(DEFAULT_OPTIONS),
 
     viteImagemin({ //  WebP
       gifsicle: {},

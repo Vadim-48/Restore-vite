@@ -90,9 +90,12 @@
         }
         &__title-wrapper {
             padding: 26px 15px;
+            width: 95%;
+            margin: 0 auto;
         }
         &__content {
             margin-top: 27px;
+            padding-bottom: 20px;
         }
         &__text{
             padding-inline: 8px;
@@ -106,7 +109,7 @@
             line-height: 1.5;
         }
         &__list {
-            margin: 20px 0 0 3px;
+            margin: 20px 0 0 0;
             line-height: 1.75;
             padding-inline: 8px;
         }

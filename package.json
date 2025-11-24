@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"node imageOptimizer.js\" \"vite\"",
+    "dev": "concurrently \"node imageOptimizer.js\" \"node generate-sprite.js\" \"vite\"",
     "prebuild": "rimraf dist",
     "build": "vite build",
     "preview": "vite preview",
