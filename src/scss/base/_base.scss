@@ -5,10 +5,7 @@
 body{
     font-family: var(--font-family);
     font-weight: 400;
-    //font-size: 16px;
-    //color: #333;
     background: #f8f9fa;
-    //background: #fff;
     position: relative;
 }
 
@@ -70,11 +67,20 @@ picture {
 
     border: 1px solid #cecece;
     border-radius: 100px;
+    &:focus-visible{
+        background: rgba(112, 128, 144, 0.5);
+    }
+    &:hover{
+        background: #333;
+        color: #fff;
+    }
+    &:active{
+        border: 3px solid #cecece;
+    }
 }
 
 .list-dots li{
     position: relative;
-    margin-top: 4px;
     text-indent: 8px;
     &::before {
         position: absolute;

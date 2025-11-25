@@ -1,5 +1,5 @@
 .hero {
-    padding-top: 73px;
+    padding: 73px 0 63px 0;
     background: #fff;
 
     &__title-wrapper {
@@ -56,7 +56,7 @@
 
 @media (max-width: 850px) {
     .hero {
-        padding-top: 29px;
+        padding: 29px 0 34px 0;
         &__title-wrapper {
             padding: 26px 15px;
         }
@@ -84,6 +84,7 @@
 
 @media (max-width: 650px){
     .hero {
+        padding: 29px 0 0 0;
         margin-inline: 13px;
         &__container{
             padding: 0 7px;

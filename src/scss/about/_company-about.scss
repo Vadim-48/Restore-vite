@@ -32,9 +32,8 @@
 
     &__row {
         display: flex;
-        //justify-content: space-between;
         gap: 5.4%;
-        margin: 32px 40px 0 47px;
+        margin: 36px 40px 0 47px;
     }
 
     &__column {
@@ -51,11 +50,8 @@
     }
 
     &__list-item {
+        line-height: 1.74;
     }
-}
-
-@media (max-width: 1100px){
-
 }
 
 @media (max-width: 850px){
@@ -63,7 +59,7 @@
         margin-top: 25px;
 
         &__wrap {
-            padding: 34px 0;
+            padding: 34px 0 26px 0;
         }
         &__head{
             margin-left: 14px;
@@ -79,6 +75,9 @@
         &__row {
             gap: 5.4%;
             margin: 22px 20px 10px 15px;
+        }
+        &__list{
+            margin-top: 6px;
         }
     }
 }
@@ -102,8 +101,12 @@
             margin: 32px auto 0 auto;
         }
         &__row {
-            gap: 5.4%;
-            margin: 22px 20px 10px 15px;
+            margin: 33px 20px 0 15px;
+            flex-direction: column;
+            gap: 25px;
+        }
+        &__list {
+            margin-top: 4px;
         }
     }
 }

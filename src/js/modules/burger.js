@@ -18,4 +18,10 @@ export function burger() {
 
   burger.addEventListener("click", toggleMenu);
   navLinks.forEach(link => link.addEventListener("click", closeMenu));
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 1420) {
+      closeMenu();
+    }
+  });
 }

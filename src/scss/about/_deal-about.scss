@@ -1,18 +1,18 @@
 .deal{
-    display: none;
     margin-top: 47px;
     &__wrap{
         display: flex;
+        background: #fff;
+        border: 1px solid #e6e6e6;
+        border-radius: 5px;
     }
     &__photo{
         flex-shrink: 0;
+        width: 50%;
+        border-radius: 4px;
     }
     &__content{
-        //display: flex;
-        //flex-direction: column;
-        //justify-content: center;
-        margin-left: -12%;
-        margin-top: 2.3%;
+        margin: 2.3% 0 0 -12%;
         padding-right: 50px;
     }
     &__title{
@@ -26,18 +26,38 @@
     }
 }
 
-@media (max-width: 1100px){
-
-}
-
 @media (max-width: 850px){
-
+    .deal{
+        margin-top: 39px;
+        &__wrap{
+            display: block;
+            padding-bottom: 36px;
+        }
+        &__photo{
+            width: 100%;
+        }
+        &__content{
+            margin: 28px 10px 0 15px;
+            padding-right: 0px;
+        }
+        &__btn{
+            margin-top: 26px;
+        }
+    }
 }
+
 
 @media (max-width: 650px){
-
-}
-
-@media (max-width: 450px){
-
+    .deal{
+        margin-top: 40px;
+        &__wrap{
+            padding-bottom: 36px;
+        }
+        &__content{
+            margin: 18px 10px 0 15px;
+        }
+        &__btn{
+            margin: 26px auto 0 auto;
+        }
+    }
 }
