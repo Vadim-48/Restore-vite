@@ -1,5 +1,5 @@
 .footer{
-    margin-top: 63px;
+    //margin-top: 63px;
 
     &__menu{
         margin: 24px auto -40px auto;
@@ -25,7 +25,7 @@
 
 @media (max-width: 850px){
     .footer {
-        margin-top: 36px;
+        //margin-top: 36px;
         &__wrap {
             padding: 13px 0 12px 0;
         }
@@ -36,7 +36,7 @@
 }
 @media (max-width: 650px){
     .footer {
-        margin-top: 24px;
+        //margin-top: 24px;
         &__rights{
             margin-top: 8px;
         }

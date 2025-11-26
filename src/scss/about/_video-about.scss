@@ -48,7 +48,12 @@
 }
 
 @media (max-width: 850px){
-
+    .video{
+        &__play-icon {
+            width: 41px;
+            height: 41px;
+        }
+    }
 }
 
 @media (max-width: 650px){
@@ -57,6 +62,10 @@
 
         &__container {
             display: contents;
+        }
+        &__play-icon {
+            width: 100px;
+            height: 100px;
         }
         &__wrapper {
             height: 220px;

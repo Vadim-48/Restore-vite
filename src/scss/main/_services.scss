@@ -1,0 +1,146 @@
+.hero{
+    padding-top: 1022px;
+}
+.services {
+
+    &__logo {
+        display: block;
+        margin: 72px auto 0 auto;
+    }
+
+    &__title {
+        text-align: center;
+        margin-top: 24px;
+    }
+
+    &__row {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-top: 29px;
+        gap: 1.1%;
+    }
+    &__col{
+        text-align: center;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.05);
+        background: #fff;
+        border-radius: 5px;
+        padding-bottom: 42px;
+    }
+    &__photo{
+        width: 100%;
+        aspect-ratio: 11/5;
+        overflow: hidden;
+    }
+    &__photo-title {
+        margin-top: 22px;
+    }
+
+    &__photo-line {
+        margin: 15px auto 0 auto;
+        height: 1px;
+        width: 80%;
+        background-color: #e2e2e2;
+    }
+
+    &__photo-text {
+        //margin: 31px auto 0 auto;
+        margin-top: 31px;
+        //width: 50%;
+    }
+
+    &__text {
+        //margin: 46px auto 0 auto;
+        margin-top: 46px;
+        text-align: center;
+        //width: 60%;
+    }
+}
+
+@media (max-width: 1110px){
+    .services {
+        //margin-top: 36px;
+        &__text_br{
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 850px){
+    .hero{
+        padding-top: 276px;
+    }
+    .services {
+        margin-top: 130px;
+        padding-inline: 13px;
+        &__title {
+            margin-top: 9px;
+        }
+        &__row {
+            grid-template-columns: 1fr 1fr;
+            margin-top: 19px;
+            gap: 25px 4.1%;
+        }
+        &__col{
+            padding-bottom: 24px;
+        }
+        &__photo-title {
+            margin-top: 8px;
+        }
+
+        &__photo-line {
+            margin: 13px auto 0 auto;
+            width: 86%;
+        }
+
+        &__photo-text {
+            //margin: 31px auto 0 auto;
+            margin-top: 19px;
+        }
+
+        &__text {
+            //margin: 46px auto 0 auto;
+            margin-top: 22px;
+        }
+    }
+}
+@media (max-width: 650px) {
+    .hero{
+        padding-top: 472px;
+    }
+    .services {
+        //margin-top: 24px;
+        padding-inline: 0;
+        &__title {
+            margin: 17px auto 0 auto;
+        }
+        &__row {
+            grid-template-columns: 1fr;
+            margin-top: 19px;
+            //gap: 3.3%;
+            gap: 25px;
+        }
+        &__col{
+            padding-bottom: 17px;
+        }
+        &__photo-title {
+            margin-top: 5px;
+        }
+
+        &__photo-line {
+            margin: 8px auto 0 auto;
+            width: 86%;
+        }
+
+        &__photo-text {
+            margin-top: 14px;
+        }
+
+        &__text {
+            margin: 36px auto 0 auto;
+            //margin-top: 36px;
+            width: 80%;
+            //width: 60%;
+        }
+    }
+}
+
