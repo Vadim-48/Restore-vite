@@ -175,7 +175,7 @@
     .callback {
         margin-top: 42px;
         &__wrap {
-            aspect-ratio: 29/54;
+            aspect-ratio: 32/38;
         }
         &__content{
             justify-content: center;
@@ -192,6 +192,13 @@
     }
     .form {
 
+    }
+}
+@media (max-width: 450px) {
+    .callback {
+        &__wrap {
+            aspect-ratio: 29/54;
+        }
     }
 }
 
