@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="UA">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wdth@75..100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/scss/stc.scss">
+    <title>Restart</title>
+</head>
+<body class="body">
+<header class="header" id="header">
+    {{> base/header}}
+    {{> base/burger}}
+</header>
+
+<main>
+    <section class="hero">
+        <div class="container hero__container">
+            {{> stc/hero-stc}}
+        </div>
+    </section>
+    <section class="address">
+        <div class="container address__container">
+            {{> stc/address-stc}}
+        </div>
+    </section>
+    <section class="video">
+        <div class="container video__container">
+            {{> stc/video-stc}}
+        </div>
+    </section>
+    <section class="callback">
+        <div class="container fcallback__container">
+            {{> stc/callback-stc}}
+        </div>
+    </section>
+    <section class="services">
+        <div class="container services__container">
+            {{> stc/services-stc}}
+        </div>
+    </section>
+</main>
+<footer class="footer" id="footer">
+    {{> base/footer}}
+</footer>
+
+<script type="module" src="src/js/stc.js" defer></script>
+</body>
+</html>

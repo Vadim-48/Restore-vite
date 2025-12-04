@@ -1,29 +1,39 @@
 .hero {
-    margin-top: 100px;
-    &__title {
-        visibility: hidden;
+    margin-top: 113px;
+    &__block{
+        //margin-top: 20px;
+        &:nth-of-type(2){
+            margin-top: -78px;
+        }
     }
-
     &__title-sub {
+
     }
 
     &__row {
-        display: grid;
-
+        //padding-left: 27px;
+        //display: grid;
+        //grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        //grid-template-columns: repeat(auto-fit, 220px);
+        margin-top: 44px;
+        display: flex;
+        justify-content: space-around;
+        gap: 10px;
     }
     &__row-1 {
-        grid-template-columns: repeat(5, 1fr);
-        gap: 50px;
-        margin-top: 44px;
+        //grid-template-columns: repeat(5, 1fr);
+        //gap: 50px;
+        //margin-top: 44px;
     }
     &__row-2 {
-        grid-template-columns: repeat(6, 1fr);
-        gap: 45px;
+        //grid-template-columns: repeat(6, 1fr);
+        //gap: 45px;
     }
 
     &__col {
         //flex: 1 0 220px;
         text-align: center;
+        width: 220px;
     }
 
     &__icon {
@@ -33,9 +43,27 @@
 
     &__icon-text {
         //text-align: center;
+        margin-top: 10px;
     }
     &__photo{
         width: 100%;
         aspect-ratio: 34/15;
+        margin-top: -17px;
+    }
+}
+@media (max-width: 1100px) {
+    .hero {
+        margin-top: 30px;
+        &__row{
+            //justify-content: space-between;
+            flex-wrap: wrap;
+            &:first-of-type {
+                margin-top: 33px;
+            }
+            //&:nth-of-type(2) {
+            //    margin-top: 0;
+            //}
+
+        }
     }
 }

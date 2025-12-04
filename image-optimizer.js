@@ -5,7 +5,7 @@ import chokidar from "chokidar";
 
 const imageDir = path.resolve("./src/image");
 
-// Рекурсивно отримуємо всі файли в папці та підпапках
+// Рекурсивно отримуємо всі файли
 function getAllFiles(dir) {
   const entries = fs.readdirSync(dir, { withFileTypes: true });
   const files = entries.flatMap(entry => {
@@ -19,23 +19,42 @@ function getAllFiles(dir) {
 async function convertToWebP(filePath) {
   if (!/\.(jpe?g|png)$/i.test(filePath)) return;
 
+  const ext = path.extname(filePath).toLowerCase();
+  const isPNG = ext === ".png";
+  const isJPG = ext === ".jpg" || ext === ".jpeg";
+
   const outputFilePathWebP = path.join(
     path.dirname(filePath),
-    `${path.basename(filePath, path.extname(filePath))}.webp`
+    `${path.basename(filePath, ext)}.webp`
   );
 
-  // Перевірка: якщо WebP вже існує і актуальний, пропускаємо конвертацію
+  // Пропускаємо, якщо WebP вже актуальний
   if (fs.existsSync(outputFilePathWebP)) {
     const srcMtime = fs.statSync(filePath).mtimeMs;
     const destMtime = fs.statSync(outputFilePathWebP).mtimeMs;
-    if (destMtime >= srcMtime) return; // WebP актуальний
+    if (destMtime >= srcMtime) return;
   }
 
   try {
-    await sharp(filePath)
-      .webp({ lossless: true, quality: 90 })
-      .toFile(outputFilePathWebP);
+    if (isPNG) {
+      // PNG → WebP Lossless (ідеальна графіка)
+      await sharp(filePath)
+        .webp({ lossless: true })
+        .toFile(outputFilePathWebP);
+
+    } else if (isJPG) {
+      // JPG → WebP Lossy (краще для фото)
+      await sharp(filePath)
+        .webp({
+          quality: 80,
+          effort: 6,     // максимальна компресія
+          lossless: false
+        })
+        .toFile(outputFilePathWebP);
+    }
+
     console.log(`Конвертовано: ${filePath}`);
+
   } catch (err) {
     console.error(`Помилка при конвертації ${filePath}:`, err);
   }
@@ -50,12 +69,12 @@ async function optimizeAllImages() {
   }
 }
 
-// Спостерігач за всіма підпапками
+// Спостерігач
 function watchImages() {
   const watcher = chokidar.watch(imageDir, {
     persistent: true,
     ignoreInitial: true,
-    depth: 99, // рекурсивно
+    depth: 99,
   });
 
   watcher.on("add", convertToWebP);
@@ -69,6 +88,7 @@ function watchImages() {
   await optimizeAllImages();
   watchImages();
 })();
+
 
 
 // import sharp from "sharp";
@@ -97,9 +117,16 @@ function watchImages() {
 //     `${path.basename(filePath, path.extname(filePath))}.webp`
 //   );
 //
+//   // Перевірка: якщо WebP вже існує і актуальний, пропускаємо конвертацію
+//   if (fs.existsSync(outputFilePathWebP)) {
+//     const srcMtime = fs.statSync(filePath).mtimeMs;
+//     const destMtime = fs.statSync(outputFilePathWebP).mtimeMs;
+//     if (destMtime >= srcMtime) return; // WebP актуальний
+//   }
+//
 //   try {
 //     await sharp(filePath)
-//       .webp({ lossless: true, quality: 75 })
+//       .webp({ lossless: false, quality: 80 })
 //       .toFile(outputFilePathWebP);
 //     console.log(`Конвертовано: ${filePath}`);
 //   } catch (err) {
@@ -132,6 +159,6 @@ function watchImages() {
 //
 // // Запуск
 // (async () => {
-//   await optimizeAllImages(); // обробляємо всі наявні файли
-//   watchImages(); // слідкуємо за новими/змінними файлами
+//   await optimizeAllImages();
+//   watchImages();
 // })();

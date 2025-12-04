@@ -1,0 +1,135 @@
+.video {
+    margin-top: 93px;
+    &__title {
+
+    }
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 41px 3% ;
+        margin-top: 40px;
+    }
+
+    &__wrapper {
+        width: 31.3%;
+        //min-width: 339px;
+        aspect-ratio: 25/16;
+    }
+
+    &__block-title {
+    }
+
+    &__file-wrap {
+        position: relative;
+        border: 1px solid #e6e6e6;
+        border-radius: 5px;
+        //width: 426px;
+        //height: 272px;
+        width: 100%;
+        height: 100%;
+        margin-top: 10px;
+        overflow: hidden;
+    }
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 101%;
+        height: 101%;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__overlay-photo{
+        position: absolute;
+        //width: 197px;
+        //height: 211px;
+        width: 52%;
+        height: 80%;
+        z-index: 4;
+    }
+
+    &__play-icon {
+        position: absolute;
+        width: 68px;
+        height: 47px;
+        z-index: 5;
+    }
+
+    &__file {
+        width: 100%;
+        height: 100%;
+    }
+}
+.title-sub {
+}
+.hero {
+
+    &__card-photo {
+    }
+
+    &__card-img {
+    }
+}
+
+@media (max-width: 850px) {
+    .video{
+        margin-top: 55px;
+
+
+        &__content {
+            margin-top: 29px;
+            gap: 28px 4%;
+        }
+        &__wrapper {
+            width: 48%;
+            //min-width: 339px;
+            aspect-ratio: 25/16;
+        }
+        &__block-title {
+            text-align: center;
+        }
+        &__file-wrap {
+            margin-top: 6px;
+        }
+        &__play-icon {
+            width: 54px;
+            height: 37px;
+        }
+
+    }
+}
+@media (max-width: 650px) {
+    .video{
+        margin-top: 48px;
+        &__title {
+            width: 70%;
+            text-align: center;
+            margin-inline: auto;
+        }
+
+        &__content {
+            margin-top: 15px;
+            gap: 17px;
+        }
+        &__wrapper {
+            width: 100%;
+            //min-width: 339px;
+            aspect-ratio: 25/16;
+        }
+        &__block-title {
+            text-align: center;
+        }
+        &__file-wrap {
+            margin-top: 0;
+        }
+        &__play-icon {
+            width: 46px;
+            height: 32px;
+        }
+
+    }
+}

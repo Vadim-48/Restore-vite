@@ -1,151 +1,191 @@
-//.hero__container{
-//    max-width: 1000px;
-//    width: 800px;
-//    height: 400px;
-//}
-//
-//.slider {
-//    position: relative;
-//    overflow: hidden;
-//    border: 3px solid crimson;
-//    width: 100%;
-//
-//    &__img{
-//        width: 100%;
-//        height: 100%;
-//        display: block;
-//        object-fit: cover;
-//
-//        //max-width: none;
-//        //user-select: none;
-//        //pointer-events: none;
-//    }
-//
-//    &__before{
-//        position: absolute;
-//        left: 0;
-//        top: 0;
-//        overflow: hidden;
-//        z-index: 2;
-//        width: 50%;
-//        height: 100%;
-//
-//    }
-//
-//    &__change{
-//        position: absolute;
-//        left: 50%;
-//        top: 0;
-//        z-index: 10;
-//        width: 1px;
-//        height: 100%;
-//        background: #fff;
-//    }
-//    &__btn{
-//        position: absolute;
-//        left: 50%;
-//        top: 50%;
-//        transform: translate(-50%, -50%);
-//        border-radius: 100%;
-//        width: 67px;
-//        height: 67px;
-//        background: #f00;
-//        display: flex;
-//        justify-content: center;
-//        align-items: center;
-//        cursor: ew-resize;
-//
-//    }
-//
-//    &__btn-img{
-//        user-select: none;
-//        pointer-events: none;
-//    }
-//
-//
-//}
-//
-//
-////picture img{
-////    width: 100%;
-////    height: 100%;
-////    display: block;
-////    object-fit: cover;
-////    user-select: none;
-////    pointer-events: none;
-////}
+.hero{
+    overflow: hidden;
+    position: relative;
+    //margin-top: 200px;
+    &__container{
+        display: contents;
+    }
+    &__wrap {
+        margin: 0 auto;
+        width: 100vw;
+        aspect-ratio: 20 / 9;
+    }
+    &__block {
+        position: absolute;
+        z-index: 4;
+        top: 50%;
+        transform: translateY(-40%);
+        background: #fff;
+        width: 280px;
+        height: 217px;
+        //padding-top: 32px;
+        display: grid;
+        grid-template-rows: 55% 45%;
+        gap: 10px;
+    }
+    &__block_left{
+        left: 0;
+    }
+    &__block_right{
+        right: 0;
+    }
 
+    &__block-wrap {
+        display: flex;
+        gap: 7px;
+        //padding-inline: 30px 20px;
+        padding-top: 32px;
+        width: 80%;
+        margin-inline: auto;
+    }
+    &__block-icon{
+        margin-top: 5px;
+        width: 42px;
+        height: 42px;
+        flex-shrink: 0;
 
-* {
-    box-sizing: border-box;
-}
+    }
+    &__block-text{
+        width: 80%;
 
-body {
-    padding: 100px;
-}
-
-.container-76 {
-    max-width: 1000px;
-    margin: 0 auto;
-    height: 400px;
+    }
+    &__block-btn{
+        //margin-top: 30px;
+        width: 200px;
+        height: 50px;
+        margin-inline: auto;
+    }
 }
 
 .slider {
     position: relative;
     overflow: hidden;
-    border: 3px solid crimson;
+    //border: 3px solid crimson;
     width: 100%;
     height: 100%;
+
+    &__before {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+        z-index: 2;
+        width: 50%;
+        height: 100%;
+    }
+    &__after {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    &__img{
+        pointer-events: none;
+        user-select: none;
+    }
+
+    &__change {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        z-index: 10;
+        width: 1px;
+        height: 100%;
+        background-color: #fff;
+    }
+    &__btn{
+        position: absolute;
+        left: 50%;
+        top: 52%;
+        transform: translate(-50%, -50%);
+        border-radius: 100%;
+        width: 67px;
+        height: 67px;
+        background-color: #f00;
+    }
+    &__btn-icon{
+        position: absolute;
+        display: block;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 48px;
+        height: 35px;
+    }
+}
+@media (max-width: 1110px){
+    .hero {
+        overflow: visible;
+        &__container{
+            display: block;
+        }
+        &__wrap{
+            display: flex;
+            justify-content: space-around;
+            gap: 10px;
+            width: auto;
+            aspect-ratio: auto;
+        }
+        &__block {
+            position: relative;
+            width: 327px;
+            height: 222px;
+            flex-shrink: 1;
+            top: 0;
+            transform: none;
+            grid-template-rows: 50% 50%;
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
+            border-radius: 5px;
+        }
+        &__block-wrap {
+            padding-top: 40px;
+        }
+
+        &__block-btn{
+            width: 225px;
+            height: 57px;
+        }
+    }
+    .slider{
+        display: none;
+    }
 }
 
-.slider img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-    max-width: none;
-    max-height: none;
+@media (max-width: 650px) {
+    .hero {
+        &__container{
+            display: block;
+        }
+        &__wrap{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            gap: 10px;
+        }
+        &__block {
+            position: relative;
+            width: 327px;
+            height: 222px;
+            flex-shrink: 1;
+        }
+
+    }
+}
+@media (max-width: 450px) {
+    .hero {
+
+        &__block {
+            width: 100%;
+            flex-shrink: 0;
+            height: 200px;
+            grid-template-rows: 55% 45%;
+        }
+        &__block-btn{
+            width: 200px;
+            height: 50px;
+        }
+
+    }
 }
 
-.before {
-    position: absolute;
-    left: 0;
-    top: 0;
-    overflow: hidden;
-    z-index: 2;
-    width: 50%;
-    height: 100%;
-}
-
-
-.slider .before img,
-.slider .after img {
-    position: absolute;    /* ← важливо! */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.change {
-    position: absolute;
-    left: 50%;
-    top: 0;
-    z-index: 10;
-    width: 3px;
-    height: 100%;
-    background-color: crimson;
-}
-
-.change::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    border-radius: 100%;
-    width: 50px;
-    height: 50px;
-    background-color: crimson;
-    transform: translate(-50%, -50%);
-}

@@ -1,12 +1,47 @@
-<div class="container-76">
+<div class="hero__wrap">
     <div class="slider">
-        <div class="before">
-            <img src="./src/image/main/sto.jpg" alt="">
+        <picture class="slider__before">
+            <source srcset="./src/image/main/sto.webp" type="image/webp">
+            <img src="./src/image/main/sto.jpg" alt="img" class="slider__img" loading="lazy">
+        </picture>
+
+        <picture class="slider__after">
+            <source srcset="./src/image/main/avto.webp" type="image/webp">
+            <img src="./src/image/main/avto.jpg" alt="img" class="slider__img" loading="lazy">
+        </picture>
+        <div class="slider__change">
+            <div class="slider__btn">
+                <svg class="slider__btn-icon">
+                    <use xlink:href="/sprite.svg#icon-slider-btn"></use>
+                </svg>
+            </div>
         </div>
-        <div class="after">
-            <img src="./src/image/main/avto.jpg" alt="">
+    </div>
+    <div class="hero__block hero__block_left">
+        <div class="hero__block-wrap">
+            <svg class="hero__block-icon">
+                <use xlink:href="/sprite.svg#icon-block-1"></use>
+            </svg>
+            <p class="hero__block-text text_666">
+                Діагностика та ремонт
+                стартерів, генераторів,
+                кондиціонерів
+            </p>
         </div>
-        <div class="change"></div>
+        <a href="#!" class="hero__block-btn btn">Мережа сервісів</a>
+    </div>
+    <div class="hero__block hero__block_right">
+        <div class="hero__block-wrap">
+            <svg class="hero__block-icon">
+                <use xlink:href="/sprite.svg#icon-block-2"></use>
+            </svg>
+            <p class="hero__block-text text_666">
+                Продаж стартерів,
+                генераторів
+                та компонентів
+            </p>
+        </div>
+        <a href="#!" class="hero__block-btn btn">Перейти в магазин</a>
     </div>
 </div>
 

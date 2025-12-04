@@ -1,0 +1,198 @@
+.callback {
+    margin-top: 100px;
+    &__wrap {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 68/27;
+    }
+    &__photo{
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    &__content{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 1.41;
+        color: #fff;
+        width: 40%;
+        margin: 10% 0 0 2.5%;
+        flex-shrink: 0;
+    }
+
+    &__form {
+        width: 29%;
+        height: 86%;
+        margin: auto 5.5% auto;
+        flex-shrink: 0;
+    }
+}
+.form {
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
+    background: #fff;
+    border-radius: 8px;
+    //padding: 34px 27px ;
+
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+        //align-items: center;
+        justify-content: space-around;
+        //justify-content: space-between;
+        //margin: 34px auto 0 auto;
+        margin: 6% auto 0 auto;
+        width: 88%;
+        height: 90%;
+    }
+
+    &__title {
+        font-size: 18px;
+        margin-left: 5px;
+    }
+    &__line{
+        width: 100%;
+        height: 1px;
+        background: #ebebeb;
+        //margin-top: 28px;
+        margin-top: 3%;
+    }
+
+    &__label{
+        font-size: 14px;
+        line-height: 1.44;
+        color: #333;
+        //margin-top: 21px;
+        //margin-top: 2%;
+        &:first-of-type{
+            //margin-top: 26px;
+            //margin-top: 7%;
+        }
+        &.required::after {
+            content: " *";
+            color: red;
+        }
+    }
+    &__placeholder {
+        font-size: 14px;
+        line-height: 1.44;
+        color: #828282;
+        border: 1px solid #e6e6e6;
+        border-radius: 2px;
+        width: 100%;
+        aspect-ratio: 7/1;
+        padding-left: 10px;
+        margin-top: 4px;
+    }
+    &__select{
+        appearance: none;
+        background:url("/src/image/stc/callback/select-arrow.svg") no-repeat right 17px center;
+        background-size: 20px 12px;
+        & option {
+            width: 100%;
+        }
+    }
+
+    &__btn {
+        background: #27ae60;
+        border-radius: 3px;
+        width: 100%;
+        min-height: 55px;
+        color: #fff;
+        border: none;
+        font-size: 18px;
+        //margin-top: 19px;
+        //margin-top: 6%;
+    }
+}
+
+@media (max-width: 1110px) {
+    .callback {
+        margin-top: 47px;
+        &__wrap {
+            aspect-ratio: 71/55;
+        }
+        &__content{
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        &__title {
+            font-size: 20px;
+            width: 64%;
+            margin: 0;
+            text-align: center;
+        }
+        &__form {
+            width: 37%;
+            height: 69%;
+            min-width: 264px;
+            min-height: 380px;
+            margin: -2% 0 0 0;
+        }
+    }
+    .form{
+        &__wrap {
+            margin: 4% auto 0 auto;
+            height: 94%;
+        }
+        &__title {
+            font-size: 16px;
+            margin-inline: auto;
+            text-align: center;
+            width: 80%;
+        }
+        &__line{
+            margin-top: 0;
+        }
+        &__placeholder {
+            aspect-ratio: 6/1;
+            padding-left: 3px;
+        }
+        &__select{
+            background-size: 14px 9px;
+            background-position: right 12px center;
+        }
+        &__btn {
+            padding: 0;
+            min-height: 60px;
+        }
+    }
+}
+@media (max-width: 650px) {
+    .callback {
+        margin-top: 42px;
+        &__wrap {
+            aspect-ratio: 29/54;
+        }
+        &__content{
+            justify-content: center;
+            gap: 4%;
+        }
+        &__title {
+            width: 84%;
+            margin-top: -5px;
+        }
+        &__form {
+            margin: 0;
+            max-height: 500px;
+        }
+    }
+    .form {
+
+    }
+}
+
+

@@ -10,7 +10,8 @@
         flex-shrink: 0;
         width: 50%;
         border-radius: 4px;
-        height: 176px;
+        //height: 176px;
+        height: 100%;
     }
     &__content{
         //margin: 2.3% 0 0 -12%;
@@ -35,10 +36,11 @@
         margin-top: 39px;
         &__wrap{
             display: block;
-            padding-bottom: 36px;
+            padding-bottom: 34px;
         }
         &__photo{
             width: 100%;
+            aspect-ratio: 35/9;
             height: auto;
         }
         &__content{
@@ -57,6 +59,9 @@
         margin-top: 40px;
         &__wrap{
             padding-bottom: 36px;
+        }
+        &__photo{
+            aspect-ratio: 72/19;
         }
         &__content{
             margin: 18px 10px 0 15px;

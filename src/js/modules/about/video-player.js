@@ -3,7 +3,7 @@ export function initVideoPlayer() {
     const iframe = document.querySelector('.video__file');
 
     overlay.addEventListener('click', () => {
-        overlay.style.display = 'none'; // прибираємо чорний екран
+        overlay.style.display = 'none';
         iframe.contentWindow.postMessage(
             '{"event":"command","func":"playVideo","args":""}',
             '*'
