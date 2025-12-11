@@ -1,5 +1,6 @@
 .callback {
     margin-top: 100px;
+    position: relative;
     &__wrap {
         position: relative;
         width: 100%;
@@ -44,41 +45,41 @@
     box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
     background: #fff;
     border-radius: 8px;
-    //padding: 34px 27px ;
 
     &__wrap {
-        display: flex;
-        flex-direction: column;
-        //align-items: center;
-        justify-content: space-around;
-        //justify-content: space-between;
-        //margin: 34px auto 0 auto;
-        margin: 6% auto 0 auto;
+        margin: 29px auto 0 auto;
         width: 88%;
         height: 90%;
     }
 
     &__title {
         font-size: 18px;
-        margin-left: 5px;
+        margin: 10px 0 0 5px;
     }
     &__line{
         width: 100%;
         height: 1px;
         background: #ebebeb;
-        //margin-top: 28px;
-        margin-top: 3%;
+        margin-top: 7%;
+    }
+
+    &__error-text{
+        color: red;
+    }
+    &__block{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     &__label{
+        display: block;
         font-size: 14px;
         line-height: 1.44;
         color: #333;
-        //margin-top: 21px;
-        //margin-top: 2%;
+        margin-top: 2%;
         &:first-of-type{
-            //margin-top: 26px;
-            //margin-top: 7%;
+            margin-top: 6%;
         }
         &.required::after {
             content: " *";
@@ -96,13 +97,45 @@
         padding-left: 10px;
         margin-top: 4px;
     }
+
     &__select{
-        appearance: none;
-        background:url("/src/image/stc/callback/select-arrow.svg") no-repeat right 17px center;
-        background-size: 20px 12px;
-        & option {
-            width: 100%;
+        position: relative;
+        width: 100%;
+    }
+    &__select-input {
+        @extend .form__placeholder;
+        cursor: pointer;
+    }
+    &__select-arrow{
+        position: absolute;
+        width: 20px;
+        height: 12px;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+
+    &__select-options{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        max-height: 100px;
+        overflow-y: auto;
+        background: #F8F9FA;
+        border: 1px solid #e6e6e6;
+        border-radius: 5px;
+        width: 100%;
+        z-index: 5;
+        display: none;
+        flex-direction: column;
+        & span{
+            padding: 10px;
+            cursor: pointer;
         }
+    }
+    &__select.open .form__select-options {
+        display: flex;
     }
 
     &__btn {
@@ -111,10 +144,17 @@
         width: 100%;
         min-height: 55px;
         color: #fff;
-        border: none;
         font-size: 18px;
-        //margin-top: 19px;
-        //margin-top: 6%;
+        margin-top: 2%;
+        &:focus-visible{
+            border: 3px solid #cecece;
+        }
+        &:hover{
+            background: #2ebf6b;
+        }
+        &:active{
+            background: #23a359;
+        }
     }
 }
 

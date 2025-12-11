@@ -11,28 +11,30 @@
     }}
     <div class="callback__content">
         <h2 class="callback__title">Заповніть форму для консультації або запису на діагностику/ремонт</h2>
-        <form action="#" name="phone-call" class="callback__form form">
+        <form action="#" name="phone-call" id="callForm" method="post" class="callback__form form">
             <fieldset class="form__wrap">
                 <h3 class="form__title">Введіть, будь ласка, ваші контактні дані</h3>
                 <hr class="form__line">
-                <div class="form__block">
-                    <label class="form__label required" for="userName">Ваше ім’я</label>
-                    <input class="form__placeholder" type="text" id="userName" placeholder="Введіть ваше ім’я" required>
+                <label class="form__label required" for="userName">Ваше ім’я</label>
+                <input class="form__placeholder" type="text" id="userName" placeholder="Введіть ваше ім’я" required>
+                <p class="form__error-text" id="nameError"></p>
+                <label class="form__label required" for="userPhone">Телефон</label>
+                <input class="form__placeholder" type="tel" id="userPhone" placeholder="Ваш контактний номер телефону"  required>
+                <p class="form__error-text" id="phoneError"></p>
+                <label class="form__label required" for="userCity">Місто</label>
+                <div class="form__select">
+                    <input type="text" id="userCity" class="form__select-input" placeholder="Оберіть місто зі списку" autocomplete="off">
+                    <img src="./src/image/stc/callback/select-arrow.svg" alt=">" class="form__select-arrow">
+                    <div class="form__select-options">
+                        <span>Київ</span>
+                        <span>Одеса</span>
+                        <span>Львів</span>
+                        <span>Харків</span>
+                        <span>Дніпро</span>
+                    </div>
                 </div>
-                <div  class="form__block">
-                    <label class="form__label required" for="userPhone">Телефон</label>
-                    <input class="form__placeholder" type="tel" id="userPhone" placeholder="Ваш контактний номер телефону" pattern="\+380[0-9]{9}" required>
-                </div>
-                <div class="form__block">
-                    <label class="form__label required" for="userCity">Місто</label>
-                    <select class="form__placeholder form__select">
-                        <option value="" disabled selected hidden>Оберіть місто зі списку</option>
-                        <option>Київ</option>
-                        <option>Одесса</option>
-                        <option>Львів</option>
-                    </select>
-                </div>
-                <button class="form__btn btn">Замовити телефонний дзвінок</button>
+                <p class="form__error-text" id="cityError"></p>
+                <button form="callForm" class="form__btn popup-link" data-popup-target="#popup">Замовити телефонний дзвінок</button>
             </fieldset>
         </form>
     </div>

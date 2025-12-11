@@ -102,9 +102,22 @@
         &:last-child{
             border-right: none;
         }
+
     }
 
     &__menu-link {
+        &.active{
+            color: #888;
+        }
+        &:focus-visible{
+            box-shadow:  0 2px 4px rgba(0,0,0,0.2);
+        }
+        &:hover{
+            transform: scale(1.05);
+        }
+        &:active{
+            opacity: 0.6;
+        }
     }
 }
 

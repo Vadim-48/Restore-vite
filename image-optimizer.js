@@ -46,8 +46,8 @@ async function convertToWebP(filePath) {
       // JPG → WebP Lossy (краще для фото)
       await sharp(filePath)
         .webp({
-          quality: 80,
-          effort: 6,     // максимальна компресія
+          quality: 90,
+          effort: 5,     // рівень компресії
           lossless: false
         })
         .toFile(outputFilePathWebP);

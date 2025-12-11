@@ -12,6 +12,7 @@ const pages = {
   about:  resolve(__dirname, 'about.html'),
   solutions:  resolve(__dirname, 'solutions.html'),
   stc:  resolve(__dirname, 'stc.html'),
+  contacts:  resolve(__dirname, 'contacts.html'),
 }
 
 export default defineConfig({
@@ -31,14 +32,14 @@ export default defineConfig({
 
   plugins: [
 
-      handlebars({
+    handlebars({
       partialDirectory: path.resolve(__dirname, 'src/html'),
     }),
 
     viteImagemin({ //  WebP
       gifsicle: {},
       optipng: { optimizationLevel: 5 },
-      mozjpeg: { quality: 85 },
+      mozjpeg: { quality: 90 },
     }),
 
     {
